@@ -7,14 +7,9 @@
   "homepage": "foo.com",
   "repository": {"type": "git","url": "foo.com/balh.git"},
   "engines": { "node": ">= 0.6.0","npm": ">= 1.0.0"},
-
-  "dependencies": {
-    "mqtt": "1.x",
-  },
-
+  "dependencies": {"mqtt": "1.x"},
   "devDependencies": {},
   "bundleDependencies": [],
-
   "private": true,
   "scripts": {"start": "node mqtt_http_example1.js"},
   "main": "mqtt_http_example1.js"
