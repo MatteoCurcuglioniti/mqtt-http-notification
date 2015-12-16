@@ -6,6 +6,8 @@ var fs   = require('fs');
 var qs   = require('querystring');
 var mqtt = require('mqtt');
 
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 var client = mqtt.connect('mqtt://test.mosquitto.org');
 
 var server = http.createServer(function (request,response){
@@ -30,6 +32,8 @@ var server = http.createServer(function (request,response){
   util.pump(rs, response);
 });
 
-server.listen(8001);
+server.listen(server_port, server_ip_address, function(){
+  console.log("Listening on " + server_ip_address + ", server_port " + server_port)
+});
 
 console.log("Running at http://127.0.0.1:8001/");
