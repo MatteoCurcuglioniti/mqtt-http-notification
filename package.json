@@ -1,0 +1,4 @@
+"scripts": {
+  "start": "node mqtt_http_example1.js"
+},
+"main": "mqtt_http_example1.js"
