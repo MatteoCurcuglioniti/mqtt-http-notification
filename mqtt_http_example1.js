@@ -28,7 +28,7 @@ var server = http.createServer(function (request,response){
 
 
   // resend the page
-  var rs = fs.createReadStream('./mqtt_http_example1.html');
+  var rs = fs.createReadStream('http://nodejs-mqtthttpnotify.rhcloud.com/mqtt_http_example1.html');
   util.pump(rs, response);
 });
 
